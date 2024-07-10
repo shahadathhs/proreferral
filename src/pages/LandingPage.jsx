@@ -17,7 +17,7 @@ export default function LandingPage() {
 
       <main className="container mx-auto mt-8 p-4">
         <section className="mb-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Find Your Perfect Job</h2>
+          <h2 className="text-2xl font-bold mb-4 max-w-sm px-10 mx-auto">Find Perfect Company for Your Job</h2>
           <Search />
         </section>
 

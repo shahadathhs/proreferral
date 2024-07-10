@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function Search() {
   const [allCompanies, setAllCompanies] = useState([]);
-  console.log(allCompanies)
   const [companyName, setCompanyName] = useState("");
   const [industry, setIndustry] = useState("");
   const [results, setResults] = useState(null);
