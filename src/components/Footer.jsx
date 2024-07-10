@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content p-4 h-[55px]">
+    <footer className="footer footer-center bg-blue-600 text-white p-4 h-[55px]">
       <aside>
         <p>
           Copyright © ${new Date().getFullYear()} - All right reserved by

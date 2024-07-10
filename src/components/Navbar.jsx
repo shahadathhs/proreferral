@@ -47,7 +47,7 @@ export default function Navbar() {
   );
 
   return (
-    <div className="navbar bg-base-200 fixed z-50">
+    <div className="navbar fixed z-50 bg-base-200 h-16">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -75,7 +75,7 @@ export default function Navbar() {
         </div>
         <Link
           to="/index"
-          className="p-0 font-bold normal-case sm:text-2xl lg:text-3xl"
+          className="p-0 font-bold normal-case text-2xl"
         >
           <span className="text-orange-500">Pro</span>
           <span className="text-blue-500">Referral</span>
@@ -135,7 +135,7 @@ export default function Navbar() {
         ) : (
           <Link
             to="/login"
-            className="text-white bg-orange-500 border-0 btn hover:bg-blue-500"
+            className="text-white bg-orange-500 border-0 btn btn-sm hover:bg-blue-500"
           >
             Login
           </Link>

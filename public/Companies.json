@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Solutions Inc",
+    "industry": "Technology",
+    "location": "San Francisco, CA",
+    "employees": 250
+  },
+  {
+    "id": 2,
+    "name": "Finance Experts LLC",
+    "industry": "Finance",
+    "location": "New York, NY",
+    "employees": 150
+  },
+  {
+    "id": 3,
+    "name": "Healthcare Innovations Group",
+    "industry": "Healthcare",
+    "location": "Chicago, IL",
+    "employees": 300
+  },
+  {
+    "id": 4,
+    "name": "Retail Solutions Corp",
+    "industry": "Retail",
+    "location": "Los Angeles, CA",
+    "employees": 200
+  },
+  {
+    "id": 5,
+    "name": "EduTech Solutions Ltd",
+    "industry": "Education",
+    "location": "Boston, MA",
+    "employees": 180
+  },
+  {
+    "id": 6,
+    "name": "Innovative Technologies",
+    "industry": "Technology",
+    "location": "Seattle, WA",
+    "employees": 220
+  },
+  {
+    "id": 7,
+    "name": "Capital Advisors Group",
+    "industry": "Finance",
+    "location": "Dallas, TX",
+    "employees": 120
+  },
+  {
+    "id": 8,
+    "name": "MediCare Systems Inc",
+    "industry": "Healthcare",
+    "location": "Miami, FL",
+    "employees": 280
+  },
+  {
+    "id": 9,
+    "name": "Fashion Retailers Ltd",
+    "industry": "Retail",
+    "location": "Atlanta, GA",
+    "employees": 190
+  },
+  {
+    "id": 10,
+    "name": "Learning Labs Ltd",
+    "industry": "Education",
+    "location": "Philadelphia, PA",
+    "employees": 160
+  },
+  {
+    "id": 11,
+    "name": "Digital Frontier Technologies",
+    "industry": "Technology",
+    "location": "Austin, TX",
+    "employees": 230
+  },
+  {
+    "id": 12,
+    "name": "Investment Capital Partners",
+    "industry": "Finance",
+    "location": "Denver, CO",
+    "employees": 130
+  },
+  {
+    "id": 13,
+    "name": "HealthPlus Solutions",
+    "industry": "Healthcare",
+    "location": "Houston, TX",
+    "employees": 260
+  },
+  {
+    "id": 14,
+    "name": "Urban Outfits Inc",
+    "industry": "Retail",
+    "location": "San Diego, CA",
+    "employees": 210
+  },
+  {
+    "id": 15,
+    "name": "EduXcellence Group",
+    "industry": "Education",
+    "location": "Portland, OR",
+    "employees": 170
+  },
+  {
+    "id": 16,
+    "name": "Cloud Solutions Ltd",
+    "industry": "Technology",
+    "location": "Phoenix, AZ",
+    "employees": 240
+  },
+  {
+    "id": 17,
+    "name": "Bankers Trust Group",
+    "industry": "Finance",
+    "location": "Charlotte, NC",
+    "employees": 140
+  },
+  {
+    "id": 18,
+    "name": "MediHelp Systems Inc",
+    "industry": "Healthcare",
+    "location": "Orlando, FL",
+    "employees": 270
+  },
+  {
+    "id": 19,
+    "name": "Global Mart Ltd",
+    "industry": "Retail",
+    "location": "Las Vegas, NV",
+    "employees": 220
+  },
+  {
+    "id": 20,
+    "name": "LearnHub Technologies",
+    "industry": "Education",
+    "location": "Minneapolis, MN",
+    "employees": 180
+  },
+  {
+    "id": 21,
+    "name": "Innovative Tech Solutions",
+    "industry": "Technology",
+    "location": "Seattle, WA",
+    "employees": 250
+  },
+  {
+    "id": 22,
+    "name": "Financial Advisors LLC",
+    "industry": "Finance",
+    "location": "New York, NY",
+    "employees": 150
+  },
+  {
+    "id": 23,
+    "name": "Healthcare Partners Group",
+    "industry": "Healthcare",
+    "location": "Chicago, IL",
+    "employees": 300
+  },
+  {
+    "id": 24,
+    "name": "Retail Solutions Inc",
+    "industry": "Retail",
+    "location": "Los Angeles, CA",
+    "employees": 200
+  },
+  {
+    "id": 25,
+    "name": "EduPro Inc",
+    "industry": "Education",
+    "location": "Boston, MA",
+    "employees": 180
+  }
+]
