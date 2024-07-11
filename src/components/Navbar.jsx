@@ -3,6 +3,7 @@ import { RxAvatar } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./../provider/AuthProvider";
 import { useContext } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const { user, logOut } = useContext(AuthContext);
@@ -140,6 +141,8 @@ export default function Navbar() {
             Login
           </Link>
         )}
+        {/* theme toggle */}
+        <ThemeToggle />
       </div>
     </div>
   );

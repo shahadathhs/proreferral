@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Search from "../components/Search";
 
 export default function LandingPage() {
@@ -30,13 +30,13 @@ export default function LandingPage() {
           </ul>
         </section>
 
-        <section className="text-center">
+        {/* <section className="text-center">
           <h2 className="text-2xl font-bold mb-4">Get Started</h2>
           <div>
             <Link to="/register" className="bg-green-500 text-white py-2 px-4 rounded mx-2">Sign Up</Link>
             <Link to="/login" className="bg-blue-500 text-white py-2 px-4 rounded mx-2">Log In</Link>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )

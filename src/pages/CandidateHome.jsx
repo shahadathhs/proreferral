@@ -115,6 +115,10 @@ export default function CandidateHome() {
 
       {/* Search Component */}
       <div className="mb-4 text-center">
+        <p className="max-w-md text-center mx-auto pb-4 text-lg">
+          Search by <span className="text-orange-500">Company Name</span>  e.g Google Inc or  
+           <span className="text-orange-500 px-2">Service Name</span>  e.g Resume Review
+        </p>
         <input
           type="text"
           value={searchQuery}
@@ -134,10 +138,11 @@ export default function CandidateHome() {
       {searchResults.length > 0 && (
         <div className="mb-4 text-center">
           <h2 className="text-xl font-bold mb-2">Search Results</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-4 ">
           {searchResults.map((result) => (
             <div
               key={result.id}
-              className="border p-2 mb-2 rounded max-w-sm mx-auto"
+              className="border p-2 mb-2 rounded"
             >
               {result.companyName ? (
                 <>
@@ -154,6 +159,8 @@ export default function CandidateHome() {
               )}
             </div>
           ))}
+          </div>
+          
         </div>
       )}
 

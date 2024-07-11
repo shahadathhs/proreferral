@@ -1,21 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate
+  Navigate,
 } from "react-router-dom";
-import Login from './authentication/Login';
-import Layout from './layout/Layout';
-import { HelmetProvider } from 'react-helmet-async';
-import { Toaster } from 'react-hot-toast';
-import AuthProvider from './provider/AuthProvider';
-import Register from './authentication/Register';
-import ErrorPage from './pages/ErrorPage';
-import LandingPage from './pages/LandingPage';
-import CandidateHome from './pages/CandidateHome';
-import PrivateRoute from './routes/PrivateRoute';
+import Login from "./authentication/Login";
+import Layout from "./layout/Layout";
+import { HelmetProvider } from "react-helmet-async";
+import { Toaster } from "react-hot-toast";
+import AuthProvider from "./provider/AuthProvider";
+import Register from "./authentication/Register";
+import ErrorPage from "./pages/ErrorPage";
+import LandingPage from "./pages/LandingPage";
+import CandidateHome from "./pages/CandidateHome";
+import PrivateRoute from "./routes/PrivateRoute";
+import ThemeProvider from "./provider/ThemeProvider";
 
 const router = createBrowserRouter([
   {
@@ -24,37 +25,43 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
-        element: <Navigate to="/index" replace />
+        path: "/",
+        element: <Navigate to="/index" replace />,
       },
       {
-        path: '/index',
+        path: "/index",
         element: <LandingPage />,
       },
       {
-        path: '/login',
+        path: "/login",
         element: <Login />,
       },
       {
-        path: '/register',
+        path: "/register",
         element: <Register />,
       },
       {
-        path: '/candidate/home',
+        path: "/candidate/home",
         // element: <CandidateHome />,
-        element: <PrivateRoute><CandidateHome /></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <CandidateHome />
+          </PrivateRoute>
+        ),
       },
-    ]
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <HelmetProvider>
-        <RouterProvider router={router} />
-        <Toaster />
-      </HelmetProvider>
-    </AuthProvider>
-  </React.StrictMode>,
+    <ThemeProvider>
+      <AuthProvider>
+        <HelmetProvider>
+          <RouterProvider router={router} />
+          <Toaster />
+        </HelmetProvider>
+      </AuthProvider>
+    </ThemeProvider>
+  </React.StrictMode>
 );

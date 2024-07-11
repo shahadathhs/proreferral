@@ -10,5 +10,21 @@ export default {
   plugins: [
     require('daisyui'),
   ],
+  daisyui: {
+    themes: [
+      // white
+      "light",
+      "cupcake",
+      "corporate",
+      // black
+      "dark",
+      "synthwave",
+      "black",
+      "luxury",
+      "dracula",
+      "night",
+      "dim",
+    ],
+  },
 }
 
