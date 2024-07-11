@@ -23,16 +23,16 @@ npm install
 
 ### 3. Setup Environment Variables
 
-Create a `.env.local` file in the root directory of the project and add the following environment variables:
+**Create a `.env.local` file in the root of the project and add the required environment variables from firebase(web)**
 
-```env
-VITE_APIKEY = AIzaSyD7GpJ_Ip5WtMiSu7KYS_FA1Hme7-Mdz8w
-VITE_AUTHDOMAIN = task-proreferral.firebaseapp.com
-VITE_PID = task-proreferral
-VITE_STORAGE = task-proreferral.appspot.com
-VITE_MESSAGE = 247766866905
-VITE_APPTD = 1:247766866905:web:648341d3b69c1c8a0d97c8
-```
+   ```sh
+   VITE_APIKEY=your-api-key
+   VITE_AUTHDOMAIN=your-auth-domain
+   VITE_PID=your-project-id
+   VITE_STORAGE=your-storage-bucket
+   VITE_MESSAGE=your-messaging-sender-id
+   VITE_APPTD=your-app-id
+   ```
 
 ### 4. Run the Development Server
 
