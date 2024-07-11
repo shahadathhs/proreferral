@@ -5,7 +5,8 @@ export default function Search() {
   const [companyName, setCompanyName] = useState("");
   const [industry, setIndustry] = useState("");
   const [results, setResults] = useState(null);
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [companyDropdownVisible, setCompanyDropdownVisible] = useState(false);
+  const [industryDropdownVisible, setIndustryDropdownVisible] = useState(false);
   const [filteredCompanyNames, setFilteredCompanyNames] = useState([]);
   const [filteredIndustries, setFilteredIndustries] = useState([]);
 
@@ -38,7 +39,8 @@ export default function Search() {
     }
 
     setResults(filteredResults);
-    setDropdownVisible(false);
+    setCompanyDropdownVisible(false);
+    setIndustryDropdownVisible(false);
   };
 
   const handleCompanyNameChange = (e) => {
@@ -49,9 +51,9 @@ export default function Search() {
       setFilteredCompanyNames(allCompanies.filter(company =>
         company.name.toLowerCase().includes(value.toLowerCase())
       ));
-      setDropdownVisible(true);
+      setCompanyDropdownVisible(true);
     } else {
-      setDropdownVisible(false);
+      setCompanyDropdownVisible(false);
     }
   };
 
@@ -60,22 +62,25 @@ export default function Search() {
     setIndustry(value);
 
     if (value.trim() !== "") {
-      setFilteredIndustries(allCompanies.filter(company =>
-        company.industry.toLowerCase().includes(value.toLowerCase())
-      ));
-      setDropdownVisible(true);
+      const industries = allCompanies
+        .filter(company => company.industry.toLowerCase().includes(value.toLowerCase()))
+        .map(company => company.industry);
+
+      setFilteredIndustries([...new Set(industries)]); // Extract unique industry names
+      setIndustryDropdownVisible(true);
     } else {
-      setDropdownVisible(false);
+      setIndustryDropdownVisible(false);
     }
   };
 
   const handleDropdownClick = (value, field) => {
     if (field === 'company') {
       setCompanyName(value);
+      setCompanyDropdownVisible(false);
     } else if (field === 'industry') {
       setIndustry(value);
+      setIndustryDropdownVisible(false);
     }
-    setDropdownVisible(false);
   };
 
   return (
@@ -92,7 +97,7 @@ export default function Search() {
             placeholder="Search by company name..."
             className="border p-2 rounded w-full"
           />
-          {dropdownVisible && filteredCompanyNames.length > 0 && (
+          {companyDropdownVisible && filteredCompanyNames.length > 0 && (
             <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 max-h-60 overflow-y-auto z-10">
               {filteredCompanyNames.map(company => (
                 <li
@@ -115,15 +120,15 @@ export default function Search() {
             placeholder="Search by industry..."
             className="border p-2 rounded w-full"
           />
-          {dropdownVisible && filteredIndustries.length > 0 && (
+          {industryDropdownVisible && filteredIndustries.length > 0 && (
             <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 max-h-60 overflow-y-auto z-10">
-              {filteredIndustries.map((company, index) => (
+              {filteredIndustries.map((industryName, index) => (
                 <li
                   key={index}
-                  onClick={() => handleDropdownClick(company.industry, 'industry')}
+                  onClick={() => handleDropdownClick(industryName, 'industry')}
                   className="p-2 hover:bg-gray-200 cursor-pointer"
                 >
-                  {company.industry}
+                  {industryName}
                 </li>
               ))}
             </ul>
